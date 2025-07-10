@@ -1,0 +1,93 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #eee;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  object-fit: cover;
+  box-shadow: 0 2px 12px #00ffcc33;
+  background: #222;
+}
+
+.code-animate {
+  display: inline-block;
+  background: linear-gradient(90deg, #00ffcc, #00ccff, #00ffcc 80%);
+  background-size: 200% auto;
+  color: #00ffcc;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: codeVibe 2.5s linear infinite;
+}
+
+@keyframes codeVibe {
+  0% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 2px #00ffcc);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 8px #00ccff);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 2px #00ffcc);
+  }
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  object-fit: cover;
+  box-shadow: 0 2px 12px #00ffcc33;
+  background: #222;
+}
+
+.code-animate {
+  display: inline-block;
+  background: linear-gradient(90deg, #00ffcc, #00ccff, #00ffcc 80%);
+  background-size: 200% auto;
+  color: #00ffcc;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: codeVibe 2.5s linear infinite;
+}
+
+@keyframes codeVibe {
+  0% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 2px #00ffcc);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 8px #00ccff);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 2px #00ffcc);
+  }
+}
+
+header, section, footer {
+  padding: 20px;
+  margin: 10px;
+  border-bottom: 1px solid #333;
+}
+
+h1, h2 {
+  color: #00ffcc;
+}
+
+a {
+  color: #00ccff;
+  text-decoration: none;
+}
