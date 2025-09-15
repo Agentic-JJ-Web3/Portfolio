@@ -22,42 +22,6 @@ body {
   background-size: 200% auto;
   color: #00ffcc;
   -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: codeVibe 2.5s linear infinite;
-}
-
-@keyframes codeVibe {
-  0% {
-    background-position: 0% 50%;
-    filter: drop-shadow(0 0 2px #00ffcc);
-  }
-  50% {
-    background-position: 100% 50%;
-    filter: drop-shadow(0 0 8px #00ccff);
-  }
-  100% {
-    background-position: 0% 50%;
-    filter: drop-shadow(0 0 2px #00ffcc);
-  }
-}
-
-.profile-pic {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 3px solid #00ffcc;
-  object-fit: cover;
-  box-shadow: 0 2px 12px #00ffcc33;
-  background: #222;
-}
-
-.code-animate {
-  display: inline-block;
-  background: linear-gradient(90deg, #00ffcc, #00ccff, #00ffcc 80%);
-  background-size: 200% auto;
-  color: #00ffcc;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: codeVibe 2.5s linear infinite;
 }
@@ -90,4 +54,35 @@ h1, h2 {
 a {
   color: #00ccff;
   text-decoration: none;
+}
+
+/* Projects Section */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.project-item {
+  text-align: center;
+  max-width: 200px;
+}
+
+.project-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.05);
 }
