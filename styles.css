@@ -44,6 +44,7 @@ body {
 header, section, footer {
   padding: 20px;
   margin: 10px;
+  text-align: center;
   border-bottom: 1px solid #333;
 }
 

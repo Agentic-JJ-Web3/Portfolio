@@ -28,8 +28,11 @@ projects.forEach(project => {
   projectItem.innerHTML = `
     
       <img src="${project.image}" alt="${project.name}" class="project-image" />
-      <p>${project.name}</p>
+      <p class="name">${project.name}</p>
+      <div class="links">
       <a href="${project.github_link}" >Github</a>
+      <a href="${project.live_link}" >Live Website</a>
+      </div>
     
   `;
 
