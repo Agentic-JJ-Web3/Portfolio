@@ -4,14 +4,14 @@ console.log("Welcome to PIERRICK's portfolio!");
 const projects = [
   {
     name: "Portfolio",
-    image: "portfolio.png", 
+    image: "https://i.ibb.co/d49Y0M19/portfolio.png", 
     github_link: "https://github.com/Agentic-JJ-Web3/portfolio",
     live_link: "https://njeipierrick.vercel.app"
 
   },
   {
     name: "237 Builds",
-    image: "./237Builds.PNG", // 
+    image: "https://i.ibb.co/fVQ4QWdf/237-Builds.png", // 
     github_link: "https://github.com/Agentic-JJ-Web3/237-builds",
     live_link: "https://237-Builds.netlify.app"
 
