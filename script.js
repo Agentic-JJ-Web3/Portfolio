@@ -4,13 +4,17 @@ console.log("Welcome to PIERRICK's portfolio!");
 const projects = [
   {
     name: "Portfolio",
-    image: "portfolio.png", // Replace with the actual image path
-    link: "https://github.com/Agentic-JJ-Web3/portfolio"
+    image: "portfolio.png", 
+    github_link: "https://github.com/Agentic-JJ-Web3/portfolio",
+    live_link: "njeipierrick.vercel.app"
+
   },
   {
     name: "237 Builds",
-    image: "./237Builds.PNG", // Replace with the actual image path
-    link: "https://github.com/Agentic-JJ-Web3/237-builds"
+    image: "./237Builds.PNG", // 
+    github_link: "https://github.com/Agentic-JJ-Web3/237-builds",
+    live_link: "237-Builds.netlify.app"
+
   }
 ];
 
