@@ -26,10 +26,11 @@ projects.forEach(project => {
   projectItem.classList.add("project-item");
 
   projectItem.innerHTML = `
-    <a href="${project.link}" target="_blank">
+    
       <img src="${project.image}" alt="${project.name}" class="project-image" />
       <p>${project.name}</p>
-    </a>
+      <a href="${project.github_link}" >Github</a>
+    
   `;
 
   projectsList.appendChild(projectItem);
