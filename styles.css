@@ -5,6 +5,28 @@ body {
   background-color: #111;
   color: #eee;
 }
+.wave {
+  font-size: 28px;
+  animation: wave 1s infinite ;
+}
+@keyframes wave {
+  0%{
+    transform: rotateX(0deg) scale(1.1);
+  }
+  25%{
+    transform: rotate(20deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  75%{
+    transform: rotate(-20deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
 
 .profile-pic {
   width: 80px;

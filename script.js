@@ -16,6 +16,7 @@ const projects = [
     live_link: "https://237-Builds.netlify.app"
 
   }
+  
 ];
 
 // Dynamically add projects to the "Projects" section
