@@ -15,6 +15,12 @@ const projects = [
     github_link: "https://github.com/Agentic-JJ-Web3/237-builds",
     live_link: "https://237-Builds.netlify.app"
 
+  },
+  {
+    name: "WeatherMaster",
+    image: "https://i.ibb.co/rGGrfqTJ/weathermaster.png",
+    github_link: "https://github.com/Agentic-JJ-Web3/Weather-Master",
+    live_link: "weather-master-three.vercel.app"
   }
   
 ];
