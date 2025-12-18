@@ -5,38 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PIERRICK's Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap; justify-content: center;">
-      <img src="https://i.ibb.co/ynwY3nG8/avatar.png" alt="Profile" class="profile-pic" />
-      <span  class="wave">👋</span>
-      <h1 class="code-animate"> Hi, I'm NJEI PIERRICK Jnr</h1> 
-    </div>
-    <p style="text-align: center;">Open-minded. Curious. Builder. Human-first.</p>
-  </header>
+  <div id="app">
+    <header id="header"></header>
+    
+    <main>
+      <section id="about" class="fade-in"></section>
+      <section id="skills" class="fade-in"></section>
+      <section id="projects" class="fade-in"></section>
+    </main>
 
-  <section>
-    <h2>💻 About Me</h2>
-    <p>I love <span class="strong-word">JavaScript</span>  and all things that push the world forward like <span class="strong-word">Open-Source.</span> </p>
-    <p>I'm passionate about Web 3.0, psychology, metaphysics, and building for humans.</p>
-  </section>
+    <footer id="footer"></footer>
+  </div>
 
-  <section>
-    <h2>🛠 Projects</h2>
-    <div id="projects-list" class="projects-list">
-      <!-- Projects will be dynamically added here -->
-    </div>
-  </section>
-
-  <footer>
-    <p>Connect with me:</p>
-    <a href="https://www.linkedin.com/in/njei-pierrick-1a52aa2b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a> |
-    <a href="https://njeipierrick.vercel.app">Portfolio</a> |
-    <a href="https://x.com/NjeiPierrick?s=09">Twitter</a> |
-    <a href="https://github.com/Agentic-JJ-Web3">GitHub</a>
-  </footer>
-
+  <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

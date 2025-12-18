@@ -1,44 +1,40 @@
-# PIERRICK's Portfolio
+# Upgradeable Portfolio 🚀
 
-This is a personal portfolio website to showcase the projects and skills of NJEI PIERRICK Jnr.
+A modern, responsive, and easily upgradeable personal portfolio template.
 
-## Live Demo
+## ✨ Features
 
-[Link to live demo]()
+- **Data-Driven Content**: Update your portfolio by simply editing `data.js`. No need to touch HTML structure.
+- **Premium Design**: Dark theme with glassmorphism effects and smooth animations.
+- **Responsive**: Looks great on mobile, tablet, and desktop.
+- **Fast**: Pure HTML, CSS, and Vanilla JS. No build steps required.
 
-## Screenshot
+## 🛠 How to Upgrade/Edit
 
-![Screenshot of the portfolio](./screenshot.png)
+**Everything is controlled by one file: `data.js`**
 
-## Technologies Used
+1.  Open `data.js`.
+2.  Update the `portfolioData` object:
+    -   **Header**: Change your name, title, profile picture URL, and social links.
+    -   **About**: Update your bio.
+    -   **Skills**: Add or remove skills. Use FontAwesome class names for icons (e.g., `fab fa-python`).
+    -   **Projects**: Add new project objects to the `projects` array.
+3.  Save the file and refresh `index.html`.
 
-* HTML
-* CSS
-* JavaScript
+## 🎨 Technologies Used
 
-## Features
+-   **HTML5**: Semantic structure.
+-   **CSS3**: Variables, Flexbox, Grid, Animations.
+-   **JavaScript**: Dynamic rendering (ES6+).
+-   **FontAwesome**: For icons.
+-   **Google Fonts**: "Outfit" typeface.
 
-* Single-page layout
-* "About Me" section
-* "Projects" section (work in progress)
-* Contact section with social media links
-* Cool "code vibe" animation on the main heading
-* Stylish, modern design with a dark theme
+## 🚀 Setup
 
-## Setup
-
-1. Clone the repository: `git clone https://github.com/Agentic-JJ-Web3/Portfolio-Agentic.git`
-2. Open `index.html` in your browser.
-
-## Usage
-
-Open the `index.html` file in your web browser to view the portfolio.
+1.  Clone the repository.
+2.  Open `index.html` in your browser.
+3.  That's it!
 
 ## Contact
 
-Connect with NJEI PIERRICK Jnr on:
-
-* **LinkedIn:** [NJEI PIERRICK](https://www.linkedin.com/in/njei-pierrick-1a52aa2b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
-* **Facebook:** [NJEI PIERRICK](https://www.facebook.com/profile.php?id=61578022567005)
-* **Twitter:** [@NjeiPierrick](https://x.com/NjeiPierrick?s=09)
-* **GitHub:** [Agentic-JJ-Web3](https://github.com/Agentic-JJ-Web3)
+Connect with the developer: [NJEI PIERRICK](https://www.linkedin.com/in/njei-pierrick-1a52aa2b8)
