@@ -28,7 +28,7 @@ const portfolioData = {
             description: "My personal portfolio website.",
             image: "https://i.ibb.co/d49Y0M19/portfolio.png",
             github_link: "https://github.com/Agentic-JJ-Web3/portfolio",
-            live_link: "https://njeipierrick.vercel.app",
+            live_link: "https://agentic-jj-web3.vercel.app/",
             tags: ["HTML", "CSS", "JS"]
         },
         {
