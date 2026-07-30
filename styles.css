@@ -252,6 +252,33 @@ h2 {
 }
 
 /* Skills */
+.skills-header { text-align: center; }
+.skills-divider {
+  width: 48px;
+  height: 1px;
+  background: var(--line);
+  margin: 1.1rem auto 0;
+}
+
+.skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  max-width: 800px;
+  margin: 2.6rem auto 0;
+}
+
+.skill-group-label {
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -279,6 +306,11 @@ h2 {
 
 .skill-tag i {
   color: var(--accent);
+}
+
+.skill-tag.exploring {
+  border-style: dashed;
+  color: var(--muted);
 }
 
 /* Projects */

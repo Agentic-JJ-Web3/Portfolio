@@ -55,20 +55,30 @@ function renderAbout() {
 
 function renderSkills() {
   const skillsSection = document.getElementById("skills");
-  // Check if skills exist in data
-  if (!portfolioData.skills) return;
+  const skills = portfolioData.skills;
+  if (!skills || !skills.groups) return;
 
-  const skillsHTML = portfolioData.skills.map(skill => `
-        <div class="skill-tag">
-            <i class="${skill.icon}"></i>
-            <span>${skill.name}</span>
+  const groupsHTML = skills.groups.map(group => `
+        <div class="skill-group">
+            <p class="skill-group-label">${group.name}</p>
+            <div class="skills-container">
+                ${group.items.map(item => `
+                    <div class="skill-tag${group.exploring ? ' exploring' : ''}">
+                        <i class="${item.icon}"></i>
+                        <span>${item.name}</span>
+                    </div>
+                `).join('')}
+            </div>
         </div>
     `).join('');
 
   skillsSection.innerHTML = `
-        <h2>🚀 Skills</h2>
-        <div class="skills-container">
-            ${skillsHTML}
+        <div class="skills-header">
+            <h2>${skills.heading}</h2>
+            <div class="skills-divider"></div>
+        </div>
+        <div class="skill-groups">
+            ${groupsHTML}
         </div>
     `;
 }

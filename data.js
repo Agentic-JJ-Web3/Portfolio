@@ -15,14 +15,53 @@ const portfolioData = {
         title: "💻 About Me",
         description: "I love <span class='strong-word'>JavaScript</span> and all things that push the world forward like <span class='strong-word'>Open-Source.</span> I'm passionate about Web 3.0, psychology, metaphysics, and building for humans."
     },
-    skills: [
-        { name: "JavaScript", icon: "fab fa-js" },
-        { name: "HTML5", icon: "fab fa-html5" },
-        { name: "CSS3", icon: "fab fa-css3-alt" },
-        { name: "React", icon: "fab fa-react" },
-        { name: "Node.js", icon: "fab fa-node" },
-        { name: "Git", icon: "fab fa-git-alt" }
-    ],
+    skills: {
+        heading: "I build with",
+        groups: [
+            {
+                name: "Frontend",
+                items: [
+                    { name: "React", icon: "fab fa-react" },
+                    { name: "Next.js", icon: "fas fa-layer-group" },
+                    { name: "TypeScript", icon: "fas fa-file-code" },
+                    { name: "Tailwind", icon: "fas fa-wind" },
+                    { name: "Framer Motion", icon: "fas fa-wand-magic-sparkles" }
+                ]
+            },
+            {
+                name: "Backend",
+                items: [
+                    { name: "Node.js", icon: "fab fa-node-js" },
+                    { name: "Express", icon: "fas fa-server" },
+                    { name: "PostgreSQL", icon: "fas fa-database" },
+                    { name: "MongoDB", icon: "fas fa-leaf" },
+                    { name: "REST APIs", icon: "fas fa-plug" },
+                    { name: "FastAPI", icon: "fas fa-bolt" }
+                ]
+            },
+            {
+                // Linux (System Administration) and AWS (Cloud) live here — from
+                // dedicated coursework, not just something picked up on the job.
+                name: "Tools",
+                items: [
+                    { name: "Git", icon: "fab fa-git-alt" },
+                    { name: "Docker", icon: "fab fa-docker" },
+                    { name: "Linux", icon: "fab fa-linux" },
+                    { name: "AWS", icon: "fab fa-aws" },
+                    { name: "Vercel", icon: "fas fa-cloud-arrow-up" },
+                    { name: "Firebase", icon: "fas fa-fire" }
+                ]
+            },
+            {
+                name: "Currently Exploring",
+                exploring: true,
+                items: [
+                    { name: "LLM Eng.", icon: "fas fa-brain" },
+                    { name: "AI Agents", icon: "fas fa-robot" }
+                ]
+            }
+        ]
+    },
     projects: [
         {
             name: "Portfolio",
