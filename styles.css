@@ -358,18 +358,55 @@ h2 {
   flex-direction: column;
 }
 
+.project-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
 .project-info h3 {
   font-family: var(--serif);
   font-weight: 500;
-  margin: 0 0 10px 0;
   font-size: 1.4rem;
 }
 
-.project-info p {
+.project-date {
+  font-size: 0.75rem;
   color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.project-case {
   flex-grow: 1;
+  margin-bottom: 1.1rem;
+}
+
+.project-case dt {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 0.85rem;
+}
+
+.project-case dt:first-child { margin-top: 0; }
+
+.project-case dd {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-top: 0.25rem;
+}
+
+.project-private {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .tags {

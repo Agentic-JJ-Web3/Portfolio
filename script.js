@@ -83,27 +83,47 @@ function renderSkills() {
     `;
 }
 
+function formatProjectDate(raw) {
+  if (!raw) return null;
+  const parsed = new Date(`${raw}-01`);
+  if (isNaN(parsed)) return raw; // e.g. a bare year like "2023"
+  return parsed.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+}
+
 function renderProjects() {
   const projectsSection = document.getElementById("projects");
 
-  const projectsHTML = portfolioData.projects.map(project => `
+  const projectsHTML = portfolioData.projects.map(project => {
+    const dateLabel = formatProjectDate(project.date);
+    const codeLink = project.github_link
+      ? `<a href="${project.github_link}" target="_blank"><i class="fab fa-github"></i> Code</a>`
+      : `<span class="project-private"><i class="fas fa-lock"></i> Private codebase</span>`;
+
+    return `
         <div class="project-card">
             <div class="project-image-wrapper">
                 <img src="${project.image}" alt="${project.name}" class="project-image" />
             </div>
             <div class="project-info">
-                <h3>${project.name}</h3>
-                <p>${project.description}</p>
+                <div class="project-meta">
+                    <h3>${project.name}</h3>
+                    ${dateLabel ? `<span class="project-date">${dateLabel}</span>` : ''}
+                </div>
+                <dl class="project-case">
+                    ${project.problem ? `<dt>Problem</dt><dd>${project.problem}</dd>` : ''}
+                    ${project.result ? `<dt>Result</dt><dd>${project.result}</dd>` : ''}
+                </dl>
                 <div class="tags">
                     ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                 </div>
                 <div class="links">
-                    <a href="${project.github_link}" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    ${codeLink}
                     <a href="${project.live_link}" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
                 </div>
             </div>
         </div>
-    `).join('');
+    `;
+  }).join('');
 
   projectsSection.innerHTML = `
         <h2>🛠 Projects</h2>

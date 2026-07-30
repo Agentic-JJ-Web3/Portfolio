@@ -62,10 +62,18 @@ const portfolioData = {
             }
         ]
     },
+    // DRAFT — problem/result copy below is a first pass written from the old
+    // one-line descriptions. Replace with the real story of each project.
+    // `date` is left blank on purpose (format "YYYY-MM") — fill in the real
+    // build date rather than have me guess; it drives the date badge on the
+    // card and stays hidden until set. Omit `github_link` entirely for
+    // private/client work — the card shows "Private codebase" instead.
     projects: [
         {
             name: "Portfolio",
-            description: "My personal portfolio website.",
+            date: "",
+            problem: "Needed a single place recruiters and collaborators could see real shipped work, instead of a resume PDF or a scattered set of links.",
+            result: "A living portfolio rebuilt project-by-project as skills grew — this current version included.",
             image: "https://i.ibb.co/d49Y0M19/portfolio.png",
             github_link: "https://github.com/Agentic-JJ-Web3/portfolio",
             live_link: "https://agentic-jj-web3.vercel.app/",
@@ -73,7 +81,9 @@ const portfolioData = {
         },
         {
             name: "237 Builds",
-            description: "A platform for Cameroon's builders.",
+            date: "",
+            problem: "Cameroonian builders had no central place to discover local tech projects and each other — everything lived in scattered WhatsApp groups and DMs.",
+            result: "A public directory of builders and projects, giving the local tech scene a shared, searchable home.",
             image: "https://i.ibb.co/fVQ4QWdf/237-Builds.png",
             github_link: "https://github.com/Agentic-JJ-Web3/237-builds",
             live_link: "https://237-Builds.netlify.app",
@@ -81,19 +91,33 @@ const portfolioData = {
         },
         {
             name: "WeatherMaster",
-            description: "Advanced weather dashboard.",
+            date: "",
+            problem: "Most weather apps bury the one thing people actually check — \"do I need a jacket\" — under charts and ads.",
+            result: "A fast, clean dashboard with city search and a forecast readable at a glance; built to learn Next.js and FastAPI end-to-end.",
             image: "https://i.ibb.co/rGGrfqTJ/weathermaster.png",
             github_link: "https://github.com/Agentic-JJ-Web3/Weather-Master",
             live_link: "https://weather-master-three.vercel.app",
             tags: ["Next.js", "FastAPI", "TS"]
         },
         {
-            name:"Onlewa Digital Empowerment",
-            description: "Building digitally empowered communities through education, innovation and opportunity",
-            image:"https://i.ibb.co/M5kcN040/image.png",
-            live_link:"https://initiative.onlewa.co",
+            name: "Onlewa Digital Empowerment",
+            date: "",
+            problem: "Onlewa needed a public-facing site to explain its digital-empowerment programs and give communities a clear way to get involved.",
+            result: "A content-managed marketing site (Sanity-backed) the Onlewa team can update themselves without touching code.",
+            image: "https://i.ibb.co/M5kcN040/image.png",
+            live_link: "https://initiative.onlewa.co",
             tags: ["Next.js", "TS", "Sanity"]
+        },
+        {
+            name:"MarketMind",
+            date:"2026/05",
+            problem: "Most Business owners had no simple unified way of tracking their finances and getting business Intel",
+            result: "A web application that helps Track finances, get AI insights, and create marketing content — all in one platform built for Cameroonian businesses.",
+            image: "https://i.ibb.co/XrKBftjQ/image.png",
+            live_link: "https://marketmind-org.vercel.app/"
+            tags: ["Next.js", "Firebase" , "Gemini" , "Groq" , "FLUX"]
         }
+
     ],
     footer: {
         text: "© 2025 NJEI PIERRICK Jnr. Built with logic and creativity."
