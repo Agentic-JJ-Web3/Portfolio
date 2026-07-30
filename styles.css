@@ -409,6 +409,87 @@ h2 {
   font-style: italic;
 }
 
+/* ---------- Projects archive (everything not featured) ---------- */
+.projects-archive { margin-top: 3.5rem; }
+
+.archive-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+.archive-header h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.archive-count { font-size: 0.8rem; color: var(--muted); }
+
+.archive-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.tag-pill {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  cursor: pointer;
+  transition: color 140ms ease, border-color 140ms ease;
+}
+
+.tag-pill:hover { color: var(--text); border-color: var(--accent); }
+.tag-pill.active { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+
+.archive-list { display: flex; flex-direction: column; }
+
+.proj-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0.3rem;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  transition: background 140ms ease;
+}
+
+.proj-list-item:hover { background: rgba(255, 255, 255, 0.03); }
+.proj-list-item:hover .proj-list-name { color: var(--accent); }
+
+.proj-list-name {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  transition: color 140ms ease;
+  flex: 1 1 auto;
+}
+
+.proj-list-tags {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+.proj-list-date {
+  font-size: 0.78rem;
+  color: var(--muted);
+  white-space: nowrap;
+  min-width: 4.2rem;
+  text-align: right;
+}
+
+.archive-empty { color: var(--muted); font-size: 0.9rem; padding: 0.6rem 0.3rem; }
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -586,5 +667,9 @@ footer {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .proj-list-tags {
+    display: none;
   }
 }

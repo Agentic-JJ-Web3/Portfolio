@@ -8,7 +8,7 @@ const portfolioData = {
             { name: "LinkedIn", icon: "fab fa-linkedin", url: "https://www.linkedin.com/in/njei-pierrick-1a52aa2b8" },
             { name: "GitHub", icon: "fab fa-github", url: "https://github.com/Agentic-JJ-Web3" },
             { name: "Twitter", icon: "fab fa-twitter", url: "https://x.com/NjeiPierrick" },
-            { name: "Portfolio", icon: "fas fa-globe", url: "https://njeipierrick.vercel.app" }
+            { name: "Blog", icon: "fas fa-globe", url: "https://njei-blog.vercel.app" }
         ]
     },
     about: {
@@ -68,6 +68,9 @@ const portfolioData = {
     // build date rather than have me guess; it drives the date badge on the
     // card and stays hidden until set. Omit `github_link` entirely for
     // private/client work — the card shows "Private codebase" instead.
+    // `featured: true` puts a project in the full case-study grid; everything
+    // else drops into the compact, filterable "All Projects" list below it —
+    // that's the split that keeps this readable once there are 30+ entries.
     projects: [
         {
             name: "Portfolio ",
@@ -81,6 +84,7 @@ const portfolioData = {
         },
         {
             name: "237 Builds",
+            featured: true,
             date: "2025-04",
             problem: "Cameroonian builders had no central place to discover local tech projects and each other — everything lived in scattered WhatsApp groups and DMs.",
             result: "A public directory of builders and projects, giving the local tech scene a shared, searchable home.",
@@ -91,6 +95,7 @@ const portfolioData = {
         },
         {
             name: "WeatherMaster",
+            featured: false,
             date: "2025-12",
             problem: "Most weather apps bury the one thing people actually check — \"do I need a jacket\" — under charts and ads.",
             result: "A fast, clean dashboard with city search and a forecast readable at a glance; built to learn Next.js and FastAPI end-to-end.",
@@ -101,6 +106,7 @@ const portfolioData = {
         },
         {
             name: "Onlewa Digital Empowerment",
+            featured: true,
             date: "2026-07",
             problem: "Onlewa needed a public-facing site to explain its digital-empowerment programs and give communities a clear way to get involved.",
             result: "A content-managed marketing site (Sanity-backed) the Onlewa team can update themselves without touching code.",
@@ -110,6 +116,7 @@ const portfolioData = {
         },
         {
             name: "MarketMind",
+            featured: true,
             date: "2026-05",
             problem: "Most business owners had no simple, unified way of tracking their finances and getting business intel.",
             result: "A web application that helps track finances, get AI insights, and create marketing content — all in one platform built for Cameroonian businesses.",

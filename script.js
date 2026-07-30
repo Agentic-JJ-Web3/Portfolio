@@ -85,21 +85,18 @@ function renderSkills() {
 
 function formatProjectDate(raw) {
   if (!raw) return null;
-  const parsed = new Date(`${raw}-01`);
+  const parsed = new Date(`${raw.replace('/', '-')}-01`);
   if (isNaN(parsed)) return raw; // e.g. a bare year like "2023"
   return parsed.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
 }
 
-function renderProjects() {
-  const projectsSection = document.getElementById("projects");
+function renderProjectCard(project) {
+  const dateLabel = formatProjectDate(project.date);
+  const codeLink = project.github_link
+    ? `<a href="${project.github_link}" target="_blank"><i class="fab fa-github"></i> Code</a>`
+    : `<span class="project-private"><i class="fas fa-lock"></i> Private codebase</span>`;
 
-  const projectsHTML = portfolioData.projects.map(project => {
-    const dateLabel = formatProjectDate(project.date);
-    const codeLink = project.github_link
-      ? `<a href="${project.github_link}" target="_blank"><i class="fab fa-github"></i> Code</a>`
-      : `<span class="project-private"><i class="fas fa-lock"></i> Private codebase</span>`;
-
-    return `
+  return `
         <div class="project-card">
             <div class="project-image-wrapper">
                 <img src="${project.image}" alt="${project.name}" class="project-image" />
@@ -123,14 +120,82 @@ function renderProjects() {
             </div>
         </div>
     `;
-  }).join('');
+}
+
+function renderArchiveItem(project) {
+  const dateLabel = formatProjectDate(project.date) || '';
+  const tagsLabel = (project.tags || []).join(' · ');
+  const tagsAttr = (project.tags || []).join(' ');
+
+  return `
+        <a class="proj-list-item" href="${project.live_link || '#'}" target="_blank" rel="noopener" data-tags="${tagsAttr}">
+            <span class="proj-list-name">${project.name}</span>
+            <span class="proj-list-tags">${tagsLabel}</span>
+            <span class="proj-list-date">${dateLabel}</span>
+        </a>
+    `;
+}
+
+function renderProjects() {
+  const projectsSection = document.getElementById("projects");
+  const all = portfolioData.projects;
+  const featured = all.filter(p => p.featured);
+  const rest = all.filter(p => !p.featured);
+
+  const featuredHTML = featured.map(renderProjectCard).join('');
+  const archiveTags = [...new Set(rest.flatMap(p => p.tags || []))].sort();
+
+  const archiveHTML = rest.length ? `
+        <div class="projects-archive">
+            <div class="archive-header">
+                <h3>All Projects</h3>
+                <span class="archive-count">${rest.length} more</span>
+            </div>
+            ${archiveTags.length ? `
+                <div class="archive-filter" role="group" aria-label="Filter by tag">
+                    <button type="button" class="tag-pill active" data-tag="all">All</button>
+                    ${archiveTags.map(t => `<button type="button" class="tag-pill" data-tag="${t}">${t}</button>`).join('')}
+                </div>
+            ` : ''}
+            <div class="archive-list" id="archiveList">
+                ${rest.map(renderArchiveItem).join('')}
+            </div>
+            <p class="archive-empty" id="archiveEmpty" hidden>No projects with this tag yet.</p>
+        </div>
+    ` : '';
 
   projectsSection.innerHTML = `
         <h2>🛠 Projects</h2>
         <div class="projects-grid">
-            ${projectsHTML}
+            ${featuredHTML}
         </div>
+        ${archiveHTML}
     `;
+
+  initArchiveFilter();
+}
+
+function initArchiveFilter() {
+  const pills = document.querySelectorAll(".archive-filter .tag-pill");
+  const items = document.querySelectorAll("#archiveList .proj-list-item");
+  const empty = document.getElementById("archiveEmpty");
+  if (!pills.length) return;
+
+  pills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      pills.forEach((p) => p.classList.remove("active"));
+      pill.classList.add("active");
+
+      const tag = pill.dataset.tag;
+      let visible = 0;
+      items.forEach((item) => {
+        const show = tag === "all" || (item.dataset.tags || "").split(" ").includes(tag);
+        item.hidden = !show;
+        if (show) visible++;
+      });
+      if (empty) empty.hidden = visible > 0;
+    });
+  });
 }
 
 function renderFooter() {
