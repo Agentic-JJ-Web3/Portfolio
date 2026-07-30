@@ -81,11 +81,11 @@ const portfolioData = {
         },
         {
             name: "237 Builds",
-            date: "",
+            date: "2025-04",
             problem: "Cameroonian builders had no central place to discover local tech projects and each other — everything lived in scattered WhatsApp groups and DMs.",
             result: "A public directory of builders and projects, giving the local tech scene a shared, searchable home.",
             image: "https://i.ibb.co/fVQ4QWdf/237-Builds.png",
-            github_link: "https://github.com/Agentic-JJ-Web3/237-builds",
+            github_link: "https://github.com/Agentic-JJ-Web3/237Builds",
             live_link: "https://237-Builds.netlify.app",
             tags: ["HTML", "CSS", "JS"]
         },
