@@ -91,7 +91,7 @@ const portfolioData = {
         },
         {
             name: "WeatherMaster",
-            date: "",
+            date: "2025-12",
             problem: "Most weather apps bury the one thing people actually check — \"do I need a jacket\" — under charts and ads.",
             result: "A fast, clean dashboard with city search and a forecast readable at a glance; built to learn Next.js and FastAPI end-to-end.",
             image: "https://i.ibb.co/rGGrfqTJ/weathermaster.png",
