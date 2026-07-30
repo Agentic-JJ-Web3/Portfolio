@@ -101,7 +101,7 @@ const portfolioData = {
         },
         {
             name: "Onlewa Digital Empowerment",
-            date: "",
+            date: "2026-07",
             problem: "Onlewa needed a public-facing site to explain its digital-empowerment programs and give communities a clear way to get involved.",
             result: "A content-managed marketing site (Sanity-backed) the Onlewa team can update themselves without touching code.",
             image: "https://i.ibb.co/M5kcN040/image.png",
@@ -119,6 +119,6 @@ const portfolioData = {
         }
     ],
     footer: {
-        text: "© 2025 NJEI PIERRICK Jnr. Built with logic and creativity."
+        text: "© 2023 NJEI PIERRICK Jnr. Built with logic and creativity."
     }
 };
