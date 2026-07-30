@@ -287,6 +287,13 @@ function initBlobMenu() {
     const rect = blob.getBoundingClientRect();
     const maxTop = window.innerHeight - rect.height - 8;
     if (rect.top > maxTop) blob.style.top = `${Math.max(8, maxTop)}px`;
+
+    // Only needs clamping when parked via an explicit `left` (post-drag);
+    // the `right: 16px` resting position is already safe at any width.
+    if (blob.style.left && blob.style.left !== "auto") {
+      const maxLeft = window.innerWidth - rect.width - 8;
+      if (rect.left > maxLeft) blob.style.left = `${Math.max(8, maxLeft)}px`;
+    }
   });
 
   menu.addEventListener("click", (e) => {
