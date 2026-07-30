@@ -70,8 +70,8 @@ const portfolioData = {
     // private/client work — the card shows "Private codebase" instead.
     projects: [
         {
-            name: "Portfolio",
-            date: "",
+            name: "Portfolio ",
+            date: "2025-07",
             problem: "Needed a single place recruiters and collaborators could see real shipped work, instead of a resume PDF or a scattered set of links.",
             result: "A living portfolio rebuilt project-by-project as skills grew — this current version included.",
             image: "https://i.ibb.co/d49Y0M19/portfolio.png",
