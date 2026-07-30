@@ -3,7 +3,7 @@ const portfolioData = {
         avatar: "avatar.png", // was: "https://i.ibb.co/ynwY3nG8/avatar.png"
         cover: "cover-photo.jpg",
         name: "NJEI PIERRICK Jnr",
-        title: "Open-minded. Curious. Builder. Human-first.",
+        title: "Open-minded. Curious. Builder. Human-first. Building online as Agentic JJ.",
         socials: [
             { name: "LinkedIn", icon: "fab fa-linkedin", url: "https://www.linkedin.com/in/njei-pierrick-1a52aa2b8" },
             { name: "GitHub", icon: "fab fa-github", url: "https://github.com/Agentic-JJ-Web3" },

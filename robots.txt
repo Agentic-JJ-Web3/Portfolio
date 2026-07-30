@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://njeipierrick.vercel.app/sitemap.xml
