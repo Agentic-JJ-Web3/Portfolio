@@ -1,24 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Archivo:wght@400;500;600&display=swap');
 
 :root {
-  --bg-color: #0f1115;
-  --card-bg: #1a1d23;
-  --text-primary: #e6e6e6;
-  --text-secondary: #a0a0a0;
-  --accent: #00ffcc;
-  --accent-glow: rgba(0, 255, 204, 0.2);
-  --gradient: linear-gradient(135deg, #00ffcc 0%, #00ccff 100%);
+  --bg: #121014;
+  --bg-raise: #1a171c;
+  --line: rgba(234, 228, 219, 0.10);
+  --text: #eae4db;
+  --muted: #9b948a;
+  --accent: #d9a441;
+  --accent-soft: rgba(217, 164, 65, 0.12);
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Archivo", -apple-system, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--sans);
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color);
-  color: var(--text-primary);
+  background-color: var(--bg);
+  color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
+
+::selection { background: var(--accent); color: var(--bg); }
 
 #app {
   max-width: 1200px;
@@ -51,8 +63,7 @@ header {
   border-radius: 50%;
   border: 3px solid var(--accent);
   object-fit: cover;
-  box-shadow: 0 0 20px var(--accent-glow);
-  background: #222;
+  background: var(--bg-raise);
 }
 
 .wave {
@@ -60,7 +71,7 @@ header {
   position: absolute;
   bottom: 0;
   right: 0;
-  animation: wave 1.5s infinite;
+  animation: wave 1.8s infinite;
   transform-origin: 70% 70%;
 }
 
@@ -99,27 +110,19 @@ header {
 }
 
 h1 {
+  font-family: var(--serif);
+  font-weight: 400;
   font-size: 3rem;
+  letter-spacing: -0.015em;
   margin: 10px 0;
 }
 
 .code-animate {
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: shine 3s linear infinite;
-}
-
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
+  color: var(--accent);
 }
 
 .subtitle {
-  color: var(--text-secondary);
+  color: var(--muted);
   font-size: 1.1rem;
 }
 
@@ -130,9 +133,9 @@ h1 {
 }
 
 .social-links a {
-  color: var(--text-primary);
+  color: var(--text);
   font-size: 1.5rem;
-  transition: transform 0.2s, color 0.2s;
+  transition: transform 200ms ease, color 200ms ease;
 }
 
 .social-links a:hover {
@@ -145,7 +148,7 @@ section {
   margin-bottom: 80px;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 section.visible {
@@ -154,6 +157,8 @@ section.visible {
 }
 
 h2 {
+  font-family: var(--serif);
+  font-weight: 400;
   text-align: center;
   font-size: 2rem;
   margin-bottom: 40px;
@@ -170,7 +175,7 @@ h2 {
   margin: 0 auto;
   text-align: center;
   font-size: 1.1rem;
-  color: var(--text-secondary);
+  color: var(--muted);
 }
 
 .strong-word {
@@ -189,20 +194,19 @@ h2 {
 }
 
 .skill-tag {
-  background: var(--card-bg);
+  background: var(--bg-raise);
   padding: 10px 20px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
+  border: 1px solid var(--line);
+  transition: border-color 200ms ease, transform 200ms ease;
 }
 
 .skill-tag:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .skill-tag i {
@@ -217,18 +221,17 @@ h2 {
 }
 
 .project-card {
-  background: var(--card-bg);
-  border-radius: 16px;
+  background: var(--bg-raise);
+  border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: border-color 200ms ease, transform 200ms ease;
+  border: 1px solid var(--line);
   display: flex;
   flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
   border-color: var(--accent);
 }
 
@@ -245,7 +248,7 @@ h2 {
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .project-info {
@@ -256,12 +259,14 @@ h2 {
 }
 
 .project-info h3 {
+  font-family: var(--serif);
+  font-weight: 500;
   margin: 0 0 10px 0;
   font-size: 1.4rem;
 }
 
 .project-info p {
-  color: var(--text-secondary);
+  color: var(--muted);
   font-size: 0.95rem;
   margin-bottom: 20px;
   flex-grow: 1;
@@ -277,7 +282,7 @@ h2 {
 .tag {
   font-size: 0.8rem;
   padding: 4px 10px;
-  background: rgba(0, 255, 204, 0.1);
+  background: var(--accent-soft);
   color: var(--accent);
   border-radius: 4px;
 }
@@ -292,9 +297,10 @@ h2 {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--text-primary);
+  color: var(--text);
   font-size: 0.9rem;
   font-weight: 600;
+  transition: color 200ms ease;
 }
 
 .links a:hover {
@@ -305,8 +311,8 @@ h2 {
 footer {
   text-align: center;
   padding: 60px 20px;
-  color: var(--text-secondary);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+  border-top: 1px solid var(--line);
   margin-top: 40px;
 }
 
