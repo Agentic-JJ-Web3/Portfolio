@@ -86,6 +86,13 @@ const portfolioData = {
             github_link: "https://github.com/Agentic-JJ-Web3/Weather-Master",
             live_link: "https://weather-master-three.vercel.app",
             tags: ["Next.js", "FastAPI", "TS"]
+        },
+        {
+            name:"Onlewa Digital Empowerment",
+            description: "Building digitally empowered communities through education, innovation and opportunity",
+            image:"https://i.ibb.co/M5kcN040/image.png",
+            live_link:"https://initiative.onlewa.co",
+            tags: ["Next.js", "TS", "Sanity"]
         }
     ],
     footer: {
