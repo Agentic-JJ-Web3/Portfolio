@@ -1,6 +1,7 @@
 const portfolioData = {
     header: {
-        avatar: "https://i.ibb.co/ynwY3nG8/avatar.png",
+        avatar: "avatar.png", // was: "https://i.ibb.co/ynwY3nG8/avatar.png"
+        cover: "cover-photo.jpg",
         name: "NJEI PIERRICK Jnr",
         title: "Open-minded. Curious. Builder. Human-first.",
         socials: [
