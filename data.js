@@ -109,15 +109,14 @@ const portfolioData = {
             tags: ["Next.js", "TS", "Sanity"]
         },
         {
-            name:"MarketMind",
-            date:"2026/05",
-            problem: "Most Business owners had no simple unified way of tracking their finances and getting business Intel",
-            result: "A web application that helps Track finances, get AI insights, and create marketing content — all in one platform built for Cameroonian businesses.",
+            name: "MarketMind",
+            date: "2026-05",
+            problem: "Most business owners had no simple, unified way of tracking their finances and getting business intel.",
+            result: "A web application that helps track finances, get AI insights, and create marketing content — all in one platform built for Cameroonian businesses.",
             image: "https://i.ibb.co/XrKBftjQ/image.png",
-            live_link: "https://marketmind-org.vercel.app/"
-            tags: ["Next.js", "Firebase" , "Gemini" , "Groq" , "FLUX"]
+            live_link: "https://marketmind-org.vercel.app/",
+            tags: ["Next.js", "Firebase", "Gemini", "Groq", "FLUX"]
         }
-
     ],
     footer: {
         text: "© 2025 NJEI PIERRICK Jnr. Built with logic and creativity."
