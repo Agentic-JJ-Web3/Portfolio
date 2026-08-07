@@ -579,6 +579,23 @@ footer {
 .nav-blob:hover { border-color: var(--accent); }
 .nav-blob:active { transform: scale(0.94); }
 
+/* Periodic attention ripple — pulses briefly, rests, repeats. Stops once
+   the menu is open (it's done its job by then) and respects reduced motion. */
+.nav-blob {
+  animation: blob-pulse 6s ease-out infinite;
+}
+.nav-blob[aria-expanded="true"] { animation: none; }
+
+@keyframes blob-pulse {
+  0%, 55% { box-shadow: 0 0 0 0 rgba(217, 164, 65, 0.45); }
+  75% { box-shadow: 0 0 0 12px rgba(217, 164, 65, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(217, 164, 65, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-blob { animation: none; }
+}
+
 .nav-blob-dot {
   width: 10px;
   height: 10px;
