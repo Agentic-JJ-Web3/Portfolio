@@ -525,6 +525,60 @@ h2 {
   color: var(--accent);
 }
 
+/* ---------- Brand photo strip ---------- */
+#gallery {
+  text-align: center;
+  padding: 20px 0 0;
+}
+
+.gallery-label {
+  margin: 0 0 16px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.gallery-strip {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.gallery-item img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--line);
+  filter: grayscale(65%);
+  opacity: 0.8;
+  transition: filter 200ms ease, opacity 200ms ease, border-color 200ms ease;
+}
+
+.gallery-item img:hover,
+.gallery-item img:focus-visible {
+  filter: grayscale(0%);
+  opacity: 1;
+  border-color: var(--accent);
+}
+
+.gallery-item figcaption {
+  font-size: 0.68rem;
+  color: var(--muted);
+}
+
 /* Footer */
 footer {
   text-align: center;
