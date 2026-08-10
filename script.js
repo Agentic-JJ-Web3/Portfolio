@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAbout();
   renderSkills();
   renderProjects();
+  renderGallery();
   renderFooter();
   initAnimations();
   initWaveHello();
@@ -20,14 +21,14 @@ function renderHeader() {
   ).join('');
 
   const coverHTML = cover
-    ? `<div class="cover"><img src="${cover}" alt="" class="cover-img" /></div>`
+    ? `<div class="cover"><img src="${cover}" alt="Agentic JJ — Njei Pierrick brand cover" class="cover-img" /></div>`
     : `<div class="cover cover-placeholder" aria-hidden="true"></div>`;
 
   header.innerHTML = `
         ${coverHTML}
         <div class="header-content">
             <div class="profile-container">
-                <img src="${avatar}" alt="Profile" class="profile-pic" />
+                <img src="${avatar}" alt="Njei Pierrick (Agentic JJ), software engineer and AI builder" class="profile-pic" />
                 <button type="button" id="waveBtn" class="wave-btn" aria-label="Say hi — opens the quick menu">
                     <span class="wave" aria-hidden="true">👋</span>
                 </button>
@@ -196,6 +197,24 @@ function initArchiveFilter() {
       if (empty) empty.hidden = visible > 0;
     });
   });
+}
+
+function renderGallery() {
+  const section = document.getElementById("gallery");
+  const photos = portfolioData.gallery;
+  if (!section || !photos || !photos.length) return;
+
+  section.innerHTML = `
+        <p class="gallery-label">In frame</p>
+        <div class="gallery-strip">
+            ${photos.map(p => `
+                <figure class="gallery-item">
+                    <img src="${p.src}" alt="${p.alt}" loading="lazy" />
+                    <figcaption>${p.caption}</figcaption>
+                </figure>
+            `).join('')}
+        </div>
+    `;
 }
 
 function renderFooter() {
