@@ -123,6 +123,16 @@ const portfolioData = {
             image: "https://i.ibb.co/XrKBftjQ/image.png",
             live_link: "https://marketmind-org.vercel.app/",
             tags: ["Next.js", "Firebase", "Gemini", "Groq", "FLUX"]
+        },
+        {
+            name: "CryptoXAF",
+            featured: false,
+            date: "2026-08",
+            problem: "Cameroonian crypto users had no simple way to see the XAF value of their crypto holdings in real time.",
+            result: "A simple, real-time crypto-to-XAF price tracker with a clean UI and no ads.",
+            image: "https://i.ibb.co/mrFdR175/image.png",
+            live_link: "https://cryptoxaf.vercel.app/",
+            tags: ["Vite","ReactJS","TS", "Node.js", "Binance API"]
         }
     ],
     footer: {
