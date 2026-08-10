@@ -15,6 +15,30 @@ const portfolioData = {
         title: "💻 About Me",
         description: "I love <span class='strong-word'>JavaScript</span> and all things that push the world forward like <span class='strong-word'>Open-Source.</span> I'm passionate about Web 3.0, psychology, metaphysics, and building for humans."
     },
+    // ---- Brand photo strip -------------------------------------------
+    // Feeds the small "In frame" strip rendered near the footer (see
+    // renderGallery in script.js). Every entry needs a real file already
+    // sitting in the project root — this array doesn't upload anything.
+    //
+    // To add a future photo (event, workshop, humble-beginnings, etc.):
+    //   1. Drop the file in the project root with a descriptive,
+    //      hyphenated filename (e.g. njei-pierrick-devfest-2026.jpg) —
+    //      filenames are a real signal for Google Images, "IMG_0231.jpg"
+    //      is not.
+    //   2. Add a row below with a specific `alt` (always include the
+    //      name) and a short `caption`.
+    //   3. Add a matching <image:image> block in sitemap.xml so Google
+    //      can discover it as a page image — see the comment there.
+    //   4. Optionally add it to the JSON-LD "image" array in index.html
+    //      if it's a strong headshot you want tied to the Person record.
+    gallery: [
+        { src: "avatar.png", alt: "Njei Pierrick (Agentic JJ), software engineer and AI builder", caption: "Profile", category: "profile" },
+        { src: "njei-pierrick-linkedin-photo.png", alt: "Njei Pierrick (Agentic JJ) LinkedIn profile photo", caption: "LinkedIn", category: "profile" },
+        { src: "njei-pierrick-corporate-photo.png", alt: "Njei Pierrick (Agentic JJ) in corporate attire", caption: "Corporate", category: "profile" },
+        { src: "njei-pierrick-casual-photo.png", alt: "Njei Pierrick (Agentic JJ), casual portrait", caption: "Casual", category: "profile" }
+        // Future rows go here, e.g.:
+        // { src: "njei-pierrick-devfest-2026.jpg", alt: "Njei Pierrick (Agentic JJ) speaking at DevFest 2026", caption: "DevFest 2026", category: "event" },
+    ],
     skills: {
         heading: "I build with",
         groups: [
@@ -136,6 +160,6 @@ const portfolioData = {
         }
     ],
     footer: {
-        text: "© 2023 NJEI PIERRICK Jnr. Built with logic and creativity."
+        text: "© 2023 NJEI PIERRICK Jnr. Built for good"
     }
 };
