@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://njeipierrick.vercel.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://njeipierrick.vercel.app/avatar.png</image:loc>
+      <image:title>Njei Pierrick (Agentic JJ), software engineer and AI builder</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://njeipierrick.vercel.app/njei-pierrick-corporate-photo.png</image:loc>
+      <image:title>Njei Pierrick (Agentic JJ) in corporate attire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://njeipierrick.vercel.app/njei-pierrick-linkedin-photo.png</image:loc>
+      <image:title>Njei Pierrick (Agentic JJ) LinkedIn profile photo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://njeipierrick.vercel.app/njei-pierrick-casual-photo.png</image:loc>
+      <image:title>Njei Pierrick (Agentic JJ), casual portrait</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://njeipierrick.vercel.app/cover-photo.jpg</image:loc>
+      <image:title>Agentic JJ — Njei Pierrick brand cover</image:title>
+    </image:image>
+    <!-- Add a new <image:image> block here for every future photo (event,
+         workshop, humble-beginnings, etc.) you add to the gallery array in
+         data.js. The <image:loc> must point at a URL that is genuinely
+         visible as an <img> on this page — Google ignores sitemap image
+         entries it can't find embedded in the page itself. -->
   </url>
 </urlset>
