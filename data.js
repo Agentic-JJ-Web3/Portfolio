@@ -1,11 +1,11 @@
 const portfolioData = {
     header: {
-        avatar: "avatar.png", // was: "https://i.ibb.co/ynwY3nG8/avatar.png"
+        avatar: "avatar.jpg", // was: "https://i.ibb.co/ynwY3nG8/avatar.png"
         cover: "cover-photo.jpg",
         name: "NJEI PIERRICK Jnr",
         title: "Open-minded. Curious. Builder. Human-first. Building online as Agentic JJ.",
         socials: [
-            { name: "LinkedIn", icon: "fab fa-linkedin", url: "https://www.linkedin.com/in/njei-pierrick-1a52aa2b8" },
+            { name: "LinkedIn", icon: "fab fa-linkedin", url: "https://www.linkedin.com/in/njeipierrick" },
             { name: "GitHub", icon: "fab fa-github", url: "https://github.com/Agentic-JJ-Web3" },
             { name: "Twitter", icon: "fab fa-twitter", url: "https://x.com/NjeiPierrick" },
             { name: "Blog", icon: "fas fa-globe", url: "https://njei-blog.vercel.app" }
@@ -32,10 +32,10 @@ const portfolioData = {
     //   4. Optionally add it to the JSON-LD "image" array in index.html
     //      if it's a strong headshot you want tied to the Person record.
     gallery: [
-        { src: "avatar.png", alt: "Njei Pierrick (Agentic JJ), software engineer and AI builder", caption: "Profile", category: "profile" },
-        { src: "njei-pierrick-linkedin-photo.png", alt: "Njei Pierrick (Agentic JJ) LinkedIn profile photo", caption: "LinkedIn", category: "profile" },
-        { src: "njei-pierrick-corporate-photo.png", alt: "Njei Pierrick (Agentic JJ) in corporate attire", caption: "Corporate", category: "profile" },
-        { src: "njei-pierrick-casual-photo.png", alt: "Njei Pierrick (Agentic JJ), casual portrait", caption: "Casual", category: "profile" }
+        { src: "avatar.jpg", alt: "Njei Pierrick (Agentic JJ), software engineer and AI builder", caption: "Profile", category: "profile" },
+        { src: "njei-pierrick-linkedin-photo.jpg", alt: "Njei Pierrick (Agentic JJ) LinkedIn profile photo", caption: "LinkedIn", category: "profile" },
+        { src: "njei-pierrick-corporate-photo.jpg", alt: "Njei Pierrick (Agentic JJ) in corporate attire", caption: "Corporate", category: "profile" },
+        { src: "njei-pierrick-casual-photo.jpg", alt: "Njei Pierrick (Agentic JJ), casual portrait", caption: "Casual", category: "profile" }
         // Future rows go here, e.g.:
         // { src: "njei-pierrick-devfest-2026.jpg", alt: "Njei Pierrick (Agentic JJ) speaking at DevFest 2026", caption: "DevFest 2026", category: "event" },
     ],
