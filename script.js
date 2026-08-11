@@ -123,17 +123,52 @@ function renderProjectCard(project) {
     `;
 }
 
-function renderArchiveItem(project) {
+function renderArchiveItem(project, index) {
   const dateLabel = formatProjectDate(project.date) || '';
   const tagsLabel = (project.tags || []).join(' · ');
   const tagsAttr = (project.tags || []).join(' ');
+  const panelId = `archive-panel-${index}`;
+
+  const codeLink = project.github_link
+    ? `<a href="${project.github_link}" target="_blank"><i class="fab fa-github"></i> Code</a>`
+    : `<span class="project-private"><i class="fas fa-lock"></i> Private codebase</span>`;
+  const liveLink = project.live_link
+    ? `<a href="${project.live_link}" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>`
+    : '';
 
   return `
-        <a class="proj-list-item" href="${project.live_link || '#'}" target="_blank" rel="noopener" data-tags="${tagsAttr}">
-            <span class="proj-list-name">${project.name}</span>
-            <span class="proj-list-tags">${tagsLabel}</span>
-            <span class="proj-list-date">${dateLabel}</span>
-        </a>
+        <div class="proj-acc-item" data-tags="${tagsAttr}">
+            <button type="button" class="proj-acc-trigger" aria-expanded="false" aria-controls="${panelId}">
+                <span class="proj-acc-name">${project.name}</span>
+                <span class="proj-acc-tags">${tagsLabel}</span>
+                <span class="proj-acc-date">${dateLabel}</span>
+                <span class="proj-acc-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="proj-acc-panel" id="${panelId}">
+                <div class="proj-acc-panel-inner">
+                    <div class="proj-acc-body">
+                        ${project.image ? `
+                            <div class="proj-acc-thumb">
+                                <img src="${project.image}" alt="${project.name}" loading="lazy" />
+                            </div>
+                        ` : ''}
+                        <div class="proj-acc-details">
+                            <dl class="project-case">
+                                ${project.problem ? `<dt>Problem</dt><dd>${project.problem}</dd>` : ''}
+                                ${project.result ? `<dt>Result</dt><dd>${project.result}</dd>` : ''}
+                            </dl>
+                            <div class="tags">
+                                ${(project.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('')}
+                            </div>
+                            <div class="links">
+                                ${codeLink}
+                                ${liveLink}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     `;
 }
 
@@ -159,7 +194,7 @@ function renderProjects() {
                 </div>
             ` : ''}
             <div class="archive-list" id="archiveList">
-                ${rest.map(renderArchiveItem).join('')}
+                ${rest.map((project, index) => renderArchiveItem(project, index)).join('')}
             </div>
             <p class="archive-empty" id="archiveEmpty" hidden>No projects with this tag yet.</p>
         </div>
@@ -174,11 +209,12 @@ function renderProjects() {
     `;
 
   initArchiveFilter();
+  initArchiveAccordion();
 }
 
 function initArchiveFilter() {
   const pills = document.querySelectorAll(".archive-filter .tag-pill");
-  const items = document.querySelectorAll("#archiveList .proj-list-item");
+  const items = document.querySelectorAll("#archiveList .proj-acc-item");
   const empty = document.getElementById("archiveEmpty");
   if (!pills.length) return;
 
@@ -195,6 +231,20 @@ function initArchiveFilter() {
         if (show) visible++;
       });
       if (empty) empty.hidden = visible > 0;
+    });
+  });
+}
+
+// Click toggles a project open (sticky, works on touch/keyboard); CSS
+// handles the hover-to-preview affordance for mouse users on top of this.
+function initArchiveAccordion() {
+  const triggers = document.querySelectorAll(".proj-acc-trigger");
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const item = trigger.closest(".proj-acc-item");
+      const isOpen = item.classList.toggle("open");
+      trigger.setAttribute("aria-expanded", String(isOpen));
     });
   });
 }
